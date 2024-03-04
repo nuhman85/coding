@@ -1,6 +1,7 @@
 package com.nuhman.coding.problem;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Flags {
@@ -43,5 +44,10 @@ public class Flags {
         int maxFlags = (int)Math.ceil(Math.sqrt(testArray.length));
         int setFlags = setFlags(peaksIndexList, maxFlags);
         System.out.println(setFlags);
+
+        //finding peaks
+        testArray = new int[]{1,2,3,4,3,4,1,2,3,4,6,2};
+        peaksIndexList = findNumberOfMountatinPeaks(testArray);
+        peaksIndexList.forEach(System.out::println);
     }
 }
